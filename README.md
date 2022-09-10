@@ -1,13 +1,9 @@
 **Scandiweb_Test**
 
-    ``macron/module-customvalidation``
+    ``git-user-kriss/scandiweb-test``
 
  - [Main Functionalities](#markdown-header-main-functionalities)
  - [Installation](#markdown-header-installation)
- - [Configuration](#markdown-header-configuration)
- - [Specifications](#markdown-header-specifications)
- - [Attributes](#markdown-header-attributes)
-
 
 ## Main Functionalities
 Create simple product trough setup patch
