@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /**
  * @category Scandiweb
  * @package Scandiweb/test
@@ -7,6 +10,7 @@
 
 namespace Scandiweb\Test\Setup\Patch\Data;
 
+use Exception;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\InputException;
 use Magento\Framework\Exception\LocalizedException;
@@ -130,18 +134,18 @@ class AddSimpleProductPatch implements DataPatchInterface
 
     /**
      * @return AddSimpleProductPatch|void
-     * @throws \Exception
+     * @throws Exception
      */
-    public function apply()
+    public function apply(): void
     {
         $this->appState->emulateAreaCode('adminhtml', [$this, 'execute']);
     }
 
     /**
-     * @throws NoSuchEntityException
      * @throws CouldNotSaveException
      * @throws InputException
      * @throws LocalizedException
+     * @throws NoSuchEntityException
      * @throws StateException
      * @throws ValidationException
      */
@@ -185,17 +189,17 @@ class AddSimpleProductPatch implements DataPatchInterface
     }
 
     /**
-     * @return array|string[]
+     * @return array
      */
-    public static function getDependencies()
+    public static function getDependencies(): array
     {
         return [];
     }
 
     /**
-     * @return array|string[]
+     * @return array
      */
-    public function getAliases()
+    public function getAliases(): array
     {
         return [];
     }
